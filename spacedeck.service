@@ -1,0 +1,14 @@
+[Unit]
+Description=Work Together Visually
+Documentation=https://spacedeck.com/
+After=network.target
+
+[Service]
+Environment=NODE_PORT=9666
+Type=simple
+User=spacedeck
+ExecStart=/usr/bin/node /home/spacedeck/spacdeck/spacedeck.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
