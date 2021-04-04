@@ -29,8 +29,8 @@ node spacedeck.js
 ```
 
 ## Verifying the Spacedeck Install
-Browse to to http://localhost:9666
-enter a username / password
-the beta-invite code is in config/defUlt.json, and is top-sekrit by default
+1. Browse to to http://localhost:9666
+2. enter a username / password
+3. the beta-invite code is in config/defUlt.json, and is *top-sekrit* by default
 
 
