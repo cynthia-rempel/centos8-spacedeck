@@ -7,6 +7,7 @@ After=network.target
 Environment=NODE_PORT=9666
 Type=simple
 User=spacedeck
+WorkingDirectory=/home/spacedeck/spacedeck
 ExecStart=/usr/bin/node /home/spacedeck/spacdeck/spacedeck.js
 Restart=always
 
