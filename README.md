@@ -38,6 +38,6 @@ node spacedeck.js
 ```
 sudo bash
 vi /etc/systemd/system/spacedeck.service
-# copy the contents of spacedeck.service into the file
+# copy the contents of https://github.com/cynthia-rempel/centos8-spacedeck/blob/main/spacedeck.service into /etc/systemd/system/spacedeck.service
 systemctl enable --now spacedeck.service
 ```
