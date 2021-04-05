@@ -31,6 +31,13 @@ node spacedeck.js
 ## Verifying the Spacedeck Install
 1. Browse to to http://localhost:9666
 2. enter a username / password
-3. the beta-invite code is in config/defUlt.json, and is *top-sekrit* by default
+3. the beta-invite code is in config/default.json, and is *top-sekrit* by default
 
+## Making spacedeck start automatically on reboot
 
+```
+sudo bash
+vi /etc/systemd/system/spacedeck.service
+# copy the contents of spacedeck.service into the file
+systemctl enable --now spacedeck.service
+```
