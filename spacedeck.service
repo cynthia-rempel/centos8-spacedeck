@@ -5,10 +5,10 @@ After=network.target
 
 [Service]
 Environment=NODE_PORT=9666
-Type=simple
+Type=forking
 User=spacedeck
-WorkingDirectory=/home/spacedeck/spacedeck
-ExecStart=/usr/bin/node /home/spacedeck/spacdeck/spacedeck.js
+WorkingDirectory=/home/spacedeck/spacedeck-open
+ExecStart=/usr/bin/node /home/spacedeck/spacdeck-open/spacedeck.js
 Restart=always
 
 [Install]
