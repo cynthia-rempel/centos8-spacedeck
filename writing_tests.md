@@ -22,9 +22,9 @@ cat __tests__/test_list.txt | \
     awk '{print $1,$2,$1}' | \
     sed 's/js$/test.js/' | \
     sed 's/).*\//) /' | \
-    awk '{print "echo const "$3" = require(../"$1"); >> "$3"\necho test("$2", () => { >> "$3"\necho   expect("$2").toBe(); >> "$3"\necho}); >> "$3}' | \
+    awk '{print "echo const "$3" = require(../"$1"); >> "$3"\necho test("$2", () => { >> "$3"\necho   expect("$2").toBe(); >> "$3"\necho }); >> "$3}' | \
     sed 's/echo\ /echo\ \"/' | \
-    sed 's/\ >/\"\ >/' > __tests__/draft-tests.sh
+    sed 's/\ >/\"\ >/' >> __tests__/draft-tests.sh
 cd __tests__
 bash -x draft-tests.sh
 ```
