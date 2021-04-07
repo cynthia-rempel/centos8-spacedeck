@@ -3,7 +3,14 @@
 Run in spacedeck-open folder
 
 ```
-grep -R ^function\  * | grep -v module | grep \{ | grep -v \= | sed 's/.js.function/.js/' | sed 's/.$//' > __tests__/test_list.txt
+grep -R ^function\  * | \
+    grep -v module | \
+    grep \{ | \
+    grep -v \= | \
+    sed 's/.js.function/.js/' | \
+    sed 's/.$//' | \
+    sed 's/\ *//g' | \
+    sed 's/.js/.js\ /' > __tests__/test_list.txt
 ```
 
 ## Writing tests
